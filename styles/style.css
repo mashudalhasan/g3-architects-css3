@@ -10,10 +10,58 @@
 :root {
     --primary-font: 'Work Sans', sans-serif;
     --primary-color: #FF900E;
+    --black-color: #131313;
+    --lightgrey-color: #727272;
+    --grey-color: #424242;
+    --white-color: #FFFFFF;
+    --offwhite-color: #FFF4E7;
 }
 
 body {
     font-family: var(--primary-font);
+}
+
+/* ----------------------------
+        Common Color styles
+------------------------------- */
+.btn-explore,
+.feature-card-btn {
+    background-color: var(--primary-color);
+}
+
+.logo,
+.banner-title,
+.bold,
+.bold-color,
+.feature-card h3,
+.fact-title h3,
+.works-title h3,
+.sponsor-title h3 {
+    color: var(--black-color);
+}
+
+.banner-details,
+.normal,
+.features-details,
+.feature-card p,
+.fact-title p,
+.works-title p,
+.sponsor-title p,
+.fact-cards p {
+    color: var(--lightgrey-color);
+}
+
+.nav-menu,
+.fact-cards h4,
+.footer-container h4 {
+    color: var(--grey-color);
+}
+
+.btn-explore,
+.feature-card-btn,
+.card-bold,
+.card-normal {
+    color: var(--white-color);
 }
 
 /* ----------------------------
@@ -36,7 +84,6 @@ header {
 .logo {
     font-weight: 700;
     font-size: 35px;
-    color: #131313;
 }
 
 .nav-menu {
@@ -45,7 +92,6 @@ header {
     gap: 20px;
     font-weight: 500;
     font-size: 18px;
-    color: #424242;
 }
 
 .banner-container {
@@ -68,24 +114,20 @@ header {
 .banner-title {
     font-weight: 700;
     font-size: 30px;
-    color: #131313;
 }
 
 .banner-details {
     font-weight: 400;
     font-size: 16px;
-    color: #727272;
 }
 
 .btn-explore {
     width: 180px;
     height: 64px;
-    background: var(--primary-color);
     border: none;
     border-radius: 8px;
     font-weight: 600;
     font-size: 14px;
-    color: #FFFFFF;
 }
 
 .banner-img img {
@@ -132,23 +174,20 @@ header {
 
 .normal {
     font-weight: 500;
-    color: #727272;
 }
 
 .bold,
 .bold-color {
     font-weight: 700;
-    color: #131313;
 }
 
 .bold-color {
-    color: #FF900E;
+    color: var(--primary-color);
 }
 
 .features-details {
     font-weight: 400;
     font-size: 14px;
-    color: #727272;
 }
 
 .features-btn {
@@ -185,8 +224,6 @@ header {
     position: absolute;
     width: 170px;
     height: 100px;
-    background-color: var(--primary-color);
-    color: #FFFFFF;
     border: none;
     border-radius: 8px;
     bottom: -20px;
@@ -204,20 +241,18 @@ header {
     padding-right: 260px;
     font-weight: 700;
     font-size: 25px;
-    color: #131313;
 }
 
 .feature-card p {
     font-weight: 400;
     font-size: 14px;
-    color: #727272;
 }
 
 .card-1,
 .card-2,
 .card-3,
 .card-4 {
-    background: #FFFFFF;
+    background: var(--white-color);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
     padding: 25px;
@@ -225,11 +260,6 @@ header {
 
 .cards h4 {
     margin-bottom: 10px;
-}
-
-.card-bold,
-.card-normal {
-    color: #FFFFFF;
 }
 
 .card-bold {
@@ -246,7 +276,9 @@ header {
         Facts Styles
 ------------------------------- */
 
-.facts-container {
+.facts-container,
+.works-container,
+.sponsor-container {
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -256,40 +288,177 @@ header {
     margin-top: 100px;
 }
 
-.fact-title {
+.fact-title,
+.works-title {
     text-align: left;
     margin-left: 0;
 }
 
-.fact-title h3 {
+.fact-title h3,
+.works-title h3,
+.sponsor-title h3 {
     font-weight: 700;
     font-size: 25px;
-    color: #131313;
 }
 
-.fact-title p {
+.fact-title p,
+.works-title p,
+.sponsor-title p {
     width: 542px;
     margin-top: 15px;
     font-weight: 400;
     font-size: 16px;
-    color: #727272;
 }
 
-.fact-cards {
+.fact-cards,
+.sponsor-logos {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 80px;
 }
 
+.fact-cards h4 {
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.fact-cards p {
+    font-weight: 600;
+    font-size: 14px;
+}
+
 .fact-card-1,
 .fact-card-2,
 .fact-card-3,
 .fact-card-4 {
-    width: 181.83px;
-    height: 181.83px;
-    border: 1px solid #FF900E;
+    width: 191.83px;
+    height: 191.83px;
+    border: 1px solid var(--primary-color);
     border-radius: 8px;
     text-align: center;
     padding: 35px;
+}
+
+/* ----------------------------
+        Works Styles
+------------------------------- */
+
+.works-gallery img {
+    width: 320px;
+    height: 218px;
+    border: none;
+    border-radius: 8px;
+}
+
+.works-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 15px;
+    column-gap: 30px;
+}
+
+/* ----------------------------
+        Sponsors Styles
+------------------------------- */
+
+.sponsor-title {
+    text-align: center;
+}
+
+.sponsor-logos img {
+    filter: grayscale(1);
+}
+
+/* ----------------------------
+        Footer Styles
+------------------------------- */
+
+.footer-container {
+    width: 80%;
+    border: none;
+    background: var(--offwhite-color);
+    border-radius: 8px;
+}
+
+.footer-container h4 {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* ----------------------------
+    Responsive Mobile Devices
+------------------------------- */
+
+@media only screen and (max-width: 576px) {
+
+    .e,
+    .f,
+    .g,
+    .h {
+        display: none;
+    }
+
+    * {
+        margin: 0;
+    }
+    header {
+        height: auto;
+    }
+    .nav-container,
+    .nav-menu {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        margin-left: 20px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .banner-container {
+        width: 100%;
+    }
+
+    .banner {
+        width: 80%;
+    }
+
+    .banner-title {
+        font-size: 20px;
+    }
+
+    .banner-details {
+        font-size: 9px;
+    }
+
+    .btn-explore {
+        width: 140px;
+        height: 60px;
+    }
+    .banner-img, .features-btn {
+        margin-bottom: 5px;
+    }
+    .banner-img img {
+        width: 314px;
+        height: 170px;
+    }
+
+    .feature-container {
+        width: 100%;
+        flex-direction: column;
+    }
+    .img-feature {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .features {
+        width: 60%;
+    }
 }
