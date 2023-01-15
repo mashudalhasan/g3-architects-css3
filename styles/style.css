@@ -382,7 +382,7 @@ header {
 }
 
 /* ----------------------------
-        Works Styles
+Works with Animation Styles
 ------------------------------- */
 
 .works-gallery img {
@@ -404,7 +404,7 @@ header {
 }
 
 /* ----------------------------
-        Sponsors Styles
+Sponsors with Animation Styles
 ------------------------------- */
 
 .sponsor-title {
@@ -413,6 +413,12 @@ header {
 
 .sponsor-logos img {
     filter: grayscale(1);
+    transition: transform 0.3s ease 0s;
+}
+
+.sponsor-logos img:hover {
+    filter: none;
+    transform: translateY(-10px);
 }
 
 /* ----------------------------
