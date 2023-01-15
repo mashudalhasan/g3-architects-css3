@@ -97,6 +97,18 @@ header {
     font-size: 18px;
 }
 
+/* ----------------------------
+    Nav Menu Animation Styles
+------------------------------- */
+.nav-menu p {
+    transition: transform 0.3s ease 0s;
+}
+
+.nav-menu>p:hover {
+    transform: translateY(-10px);
+    color: var(--primary-color);
+}
+
 .banner-container {
     display: flex;
     flex-direction: column;
