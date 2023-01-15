@@ -129,7 +129,6 @@ header {
 .btn-explore {
     width: 180px;
     height: 64px;
-    border: none;
     border-radius: 8px;
     font-weight: 600;
     font-size: 18px;
@@ -490,6 +489,9 @@ Sponsors with Animation Styles
     .btn-explore {
         width: 140px;
         height: 60px;
+        border: none;
+        background-color: var(--primary-color);
+        color: var(--white-color);
     }
 
     .banner-img {
